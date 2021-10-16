@@ -28,10 +28,10 @@ namespace _110_1Practice2_3
             }
                 
             if (M == den)
-                Response.Write("True" );
+                Response.Write("True");
 
             else
-                Response.Write("False" );
+                Response.Write("False");
         }
     }
 }
