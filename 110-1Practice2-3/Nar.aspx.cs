@@ -20,8 +20,8 @@ namespace _110_1Practice2_3
             N = num;
 
             //重覆到算完為止(<=0)
-            while (N != 0) 
-            {   
+            while (N != 0)
+            {
                 //算出第幾位數
                 den = N % 10;
 
@@ -37,8 +37,8 @@ namespace _110_1Practice2_3
                 Response.Write("True");
             }
             else
-            { 
-                Response.Write("False");  
+            {
+                Response.Write("False");
             }
         }
     }
