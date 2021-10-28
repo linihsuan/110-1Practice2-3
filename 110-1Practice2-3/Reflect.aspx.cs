@@ -11,27 +11,32 @@ namespace _110_1Practice2_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //要判斷的數值
-            int M = 663166;
+            int M, r, sum, o_M, n;
 
-            //辨識第幾位數(餘數)
-            int den = 0;
-
-            //計算後的餘數
-            int sum = 0;
-
-            while (M != 0)
+            M = 663166;
+            o_M = M;
+            sum = 0;
+            n = 0;
+            while (M > 0)
             {
-                sum = M % 10;
-                den = den * 10 + sum;
+                r = M % 10;
+                sum = (sum * 10) + r;
                 M = M / 10;
+                n++;
             }
-                
-            if (M == den)
-                Response.Write("True");
 
+            if (o_M == sum & n <= 8)
+            {
+                Response.Write("True");
+            }
+            else if (n > 8)
+            {
+                Response.Write("M值不能大於8"); ;
+            }
             else
+            {
                 Response.Write("False");
+            }
         }
     }
 }
